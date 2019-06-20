@@ -12,8 +12,10 @@ for (a = 'a'; a <= 'z'; a++)
 if ((a == 'q') || (a == 'e'))
 {
 continue;
-} else {
-putchar(a);  
+}
+else
+{
+putchar(a);
 }
 }
 putchar('\n');
