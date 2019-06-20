@@ -2,7 +2,9 @@
 #include <time.h>
 #include <stdio.h>
 /* more headers goes there */
-
+/**
+   Check the last digit of a number and print a string according to the value"
+**/
 /* betty style doc for function main goes there */
 int main(void)
 {
