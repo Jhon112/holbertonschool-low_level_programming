@@ -20,11 +20,12 @@ for (c = a; c <= 57; c++)
 {
 for (d = 48; d <= 57; d++)
 {
-if((d <= b) && (c == a))
+if ((d <= b) && (c == a))
 {
 continue;
-} else
-{    
+}
+else
+{
 putchar(a);
 putchar(b);
 putchar(' ');
