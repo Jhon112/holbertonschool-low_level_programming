@@ -7,12 +7,12 @@
  */
 int main(void)
 {
-char a;
+int a;
 
-for (a = '0'; a <= '9'; a++)
+for (a = 48; a <= 57; a++)
 {
 putchar(a);
-if (a != '9')
+if (a != 57)
 putchar(',');
 putchar(' ');
 }
