@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * _islower - check if  a letter is lowercase
+ * _isalpha - check if  a letter is lowercase
  * @c: the value to be compared
  *
  * Return: 1 if lowercase
