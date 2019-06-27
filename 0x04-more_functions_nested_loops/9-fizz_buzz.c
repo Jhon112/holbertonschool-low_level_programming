@@ -2,7 +2,7 @@
 /**
  * main - Fizz buzz exercise
  *
- * Result: void
+ * Return: 0 (Success)
  */
 int main(void)
 {
@@ -10,7 +10,7 @@ int main(void)
 
 	for (a = 1; a <= 100; a++)
 	{
-		if (a > 0)
+		if (a > 1)
 		{
 			printf(" ");
 		}
