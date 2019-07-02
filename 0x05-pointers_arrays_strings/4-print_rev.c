@@ -11,16 +11,16 @@ void print_rev(char *s)
 	int i;
 
 	contador = 0;
-	while (*(s + contador) != 0)
+	while (s[contador] != '\0')
 	{
 		contador++;
 	}
 
 	i = 0;
-	while (i <= contador)
+	while (i < contador)
 	{
 		contador--;
-		_putchar(*(s + contador));
+		_putchar(s[contador]);
 	}
 	_putchar('\n');
 }
