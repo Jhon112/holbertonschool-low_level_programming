@@ -19,7 +19,7 @@ char *_strncpy(char *dest, char *src, int n)
 		j++;
 	}
 
-	while (*(src + i) != 0 )
+	while (*(src + i) != 0)
 	{
 		if (i == n)
 			break;
