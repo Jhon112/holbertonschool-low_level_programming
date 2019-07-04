@@ -27,7 +27,7 @@ char *_strncpy(char *dest, char *src, int n)
 		dest[i] = *(src + i);
 		i++;
 	}
-	while (i < j)
+	while (i < n)
 	{
 		dest[i] = '\0';
 		i++;
