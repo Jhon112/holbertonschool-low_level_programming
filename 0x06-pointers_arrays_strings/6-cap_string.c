@@ -17,6 +17,10 @@ char *cap_string(char *s)
 		{
 			if (*(s + i) == *(separators + a))
 			{
+				if (*(s + i) == 9)
+				{
+					*(s + i) = 32;
+				}
 				if (*(s + (i + 1)) >= 97 && *(s + (i + 1)) <= 122)
 				{
 					*(s + (i + 1)) = *(s + (i + 1)) - 97 + 65;
