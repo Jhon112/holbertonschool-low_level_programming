@@ -8,12 +8,12 @@ char *cap_string(char *s)
 {
 	int i;
 	int a;
-	char separators[] = " .,,\t\n;!?\"(){";
+	char separators[] = " .,,\t\n;!?\"(){}";
 
 	i = 0;
 	while (*(s + i) != 0)
 	{
-		for (a = 0; a < 13; a++)
+		for (a = 0; a < 14; a++)
 		{
 			if (*(s + i) == *(separators + a))
 			{
