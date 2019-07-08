@@ -2,5 +2,6 @@
 #define HOLBERTON_H
 
 int _putchar(char);
+char *_memset(char *, char, unsigned int);
 
 #endif
