@@ -13,20 +13,13 @@ void print_chessboard(char (*a)[8])
 	row = 0;
 	while (row < 8)
 	{
-		if (row > 1 && row < 6)
+		column = 0;
+		while (column < 8)
 		{
-			_putchar('\n');
+			_putchar(a[row][column]);
+			column++;
 		}
-		else
-		{
-			column = 0;
-			while (column < 8)
-			{
-				_putchar(a[row][column]);
-				column++;
-			}
-			_putchar('\n');
-		}
+		_putchar('\n');
 		row++;
 	}
 }
