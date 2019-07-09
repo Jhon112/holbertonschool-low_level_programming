@@ -18,7 +18,7 @@ char *_strstr(char *haystack, char *needle)
 		if (*haystack == *needle)
 		{
 			fc = &haystack;
-			for (a = 1; *(needle + a) != '\0'; a++)
+			for (a = 0; *(needle + a) != '\0'; a++)
 			{
 				if (*(needle + a) != *(haystack + a))
 				{
