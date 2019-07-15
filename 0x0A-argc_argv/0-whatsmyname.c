@@ -1,12 +1,10 @@
 #include <stdio.h>
-
 /**
- * main - Calculate the lenght of a string
- * @argc: The count of arguments
- * @argv: An array containing the program command arguments
+ * main - prints its name, followed by a new line.
+ * @argc: Arguments count.
+ * @argv: Array of args
  *
- * Return: On success 1.
- * On error, -1 is returned
+ * Return: Always 0 (success).
  */
 int main(int argc, char *argv[])
 {
