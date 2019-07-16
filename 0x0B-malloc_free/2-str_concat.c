@@ -14,22 +14,16 @@ int length_two_strings(char *s1, char *s2)
 	i = 0;
 	length = 0;
 
-	if (s1 != NULL)
+	while (*(s1 + i) != 0)
 	{
-		while (*(s1 + i) != 0)
-		{
-			length++;
-			i++;
-		}
+		length++;
+		i++;
 	}
 
-	if (s2 != NULL)
+	while (*(s2 + i) != 0)
 	{
-		while (*(s2 + i) != 0)
-		{
-			length++;
-			i++;
-		}
+		length++;
+		i++;
 	}
 	return (length);
 }
@@ -49,8 +43,13 @@ char *str_concat(char *s1, char *s2)
 	int i;
 	int a;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
 	length = length_two_strings(s1, s2);
-	s = (char *) malloc((sizeof(*s) * length) + 1);
+	s = (char *) malloc((sizeof(char) * length) + 1);
 	if (s == NULL)
 	{
 		return (NULL);
@@ -58,24 +57,19 @@ char *str_concat(char *s1, char *s2)
 	a = 0;
 	i = 0;
 
-	if (s1 != NULL)
+	while (*(s1 + i) != 0)
 	{
-		while (*(s1 + i) != 0)
-		{
-			s[a] = s1[i];
-			i++;
-			a++;
-		}
+		s[a] = s1[i];
+		i++;
+		a++;
 	}
-	if (s2 != NULL)
+
+	i = 0;
+	while (*(s2 + i) != 0)
 	{
-		i = 0;
-		while (*(s2 + i) != 0)
-		{
-			s[a] = s2[i];
-			a++;
-			i++;
-		}
+		s[a] = s2[i];
+		a++;
+		i++;
 	}
 	return (s);
 }
