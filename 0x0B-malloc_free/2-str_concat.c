@@ -25,7 +25,7 @@ int length_two_strings(char *s1, char *s2)
 
 	if (s2 != NULL)
 	{
-		while(*(s2 + i) != 0)
+		while (*(s2 + i) != 0)
 		{
 			length++;
 			i++;
@@ -57,20 +57,25 @@ char *str_concat(char *s1, char *s2)
 	}
 	a = 0;
 	i = 0;
-	while (*(s1 + i) != 0)
-	{
-		s[a] = s1[i];
-		i++;
-		a++;
-	}
 
-	i = 0;
-	while (*(s2 + i) != 0)
+	if (s1 != NULL)
 	{
-		s[a] = s2[i];
-		a++;
-		i++;
+		while (*(s1 + i) != 0)
+		{
+			s[a] = s1[i];
+			i++;
+			a++;
+		}
 	}
-
+	if (s2 != NULL)
+	{
+		i = 0;
+		while (*(s2 + i) != 0)
+		{
+			s[a] = s2[i];
+			a++;
+			i++;
+		}
+	}
 	return (s);
 }
