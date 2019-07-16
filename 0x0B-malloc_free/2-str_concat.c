@@ -19,7 +19,7 @@ int length_two_strings(char *s1, char *s2)
 		length++;
 		i++;
 	}
-
+	i = 0;
 	while (*(s2 + i) != 0)
 	{
 		length++;
