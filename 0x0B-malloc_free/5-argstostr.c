@@ -53,7 +53,7 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 	{
 		j = 0;
-		while(*(*(av + i) + j) != 0)
+		while (*(*(av + i) + j) != 0)
 		{
 			*(s + a) = *(*(av + i) + j);
 			if (*(*(av + i) + (j + 1)) == 0)
