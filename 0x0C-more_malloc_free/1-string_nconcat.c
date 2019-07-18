@@ -24,7 +24,7 @@ int get_length(char *str)
  *
  * Return: pointer to concatenated string
  */
-char *string_nconcat( char *s1, char *s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int length;
 	unsigned int i;
@@ -37,16 +37,13 @@ char *string_nconcat( char *s1, char *s2, unsigned int n)
 		s2 = "";
 
 	length = get_length(s2);
-	if(length > n)
-	{
+	if (length > n)
 		length = n;
-	}
-	length += get_length(s1);
 
+	length += get_length(s1);
 	s = malloc((sizeof(*s) * length) + 1);
 	if (s == NULL)
 		return (NULL);
-
 	i = 0;
 	a = 0;
 	while (*(s1 + i) != 0)
@@ -58,10 +55,9 @@ char *string_nconcat( char *s1, char *s2, unsigned int n)
 	i = 0;
 	while (*(s2 + i) != 0)
 	{
-		if(i == n)
+		if (i == n)
 			break;
-		else
-			s[a] = s2[i];
+		s[a] = s2[i];
 		i++;
 		a++;
 	}
