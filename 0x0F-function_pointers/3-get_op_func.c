@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "3-calc.h"
+#include <string.h>
 /**
  * get_op_func - returns a pointer to a function depending on the char given
  * @s: pointer to char given
@@ -21,7 +22,7 @@ int (*get_op_func(char *s))(int, int)
 	i = 0;
 	while (i < 5)
 	{
-		if (*(ops[i].op) == *s)
+		if ((strcmp(ops[i].op, s)) == 0)
 			return (ops[i].f);
 		i++;
 	}
