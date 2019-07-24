@@ -4,7 +4,7 @@
  * get_op_func - returns a pointer to a function depending on the char given
  * @s: pointer to char given
  *
- * Return: pointer to function that returns an int and receive two ints as parms
+ * Return: pointer to function that returns an int and receive two ints
  */
 int (*get_op_func(char *s))(int, int)
 {

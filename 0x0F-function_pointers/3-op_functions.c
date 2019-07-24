@@ -1,6 +1,6 @@
 #include <stdlib.h>
 /**
- * op_add: returns the sum of a and b.
+ * op_add - returns the sum of a and b.
  * @a: first int
  * @b: second int
  *
@@ -12,7 +12,7 @@ int op_add(int a, int b)
 }
 
 /**
- * op_sub: returns the difference of a and b
+ * op_sub - returns the difference of a and b
  * @a: first int
  * @b: second int
  *
@@ -24,7 +24,7 @@ int op_sub(int a, int b)
 }
 
 /**
- * op_Mul: returns the product of a and b
+ * op_mul - returns the product of a and b
  * @a: first int
  * @b: second int
  *
@@ -36,7 +36,7 @@ int op_mul(int a, int b)
 }
 
 /**
- * op_div: returns the division of two ints
+ * op_div - returns the division of two ints
  * @a: first int
  * @b: second int
  *

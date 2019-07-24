@@ -3,7 +3,7 @@
 #include "3-calc.h"
 /**
  * main - takes args and pass them to fn to find the correct fn to be called
- * @arg: number of args
+ * @args: number of args
  * @argv: array of args
  *
  * Return: 0 if correct. otherwise if fails
