@@ -7,7 +7,7 @@
  *
  * Return: length of str
  */
-int get_length(char *str)
+int get_length(const char *str)
 {
 	int len;
 
@@ -33,7 +33,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (new == NULL)
 		return (NULL);
 	new->str = strdup(str);
-	new->len = get_length(new->str);
+	new->len = get_length(str);
 	new->next = *head;
 	*head = new;
 	return (new);
