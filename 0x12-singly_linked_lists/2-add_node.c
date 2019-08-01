@@ -26,14 +26,14 @@ int get_length(char *str)
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
-	char *cpy_str;
 
-	cpy_str = strdup(str);
+	if (head == NULL)
+		return (NULL);
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
 		return (NULL);
-	new->str = cpy_str;
-	new->len = get_length(cpy_str);
+	new->str = strdup(str);
+	new->len = get_length(new->str);
 	new->next = *head;
 	*head = new;
 	return (new);
