@@ -34,7 +34,7 @@ int create_file(char *filename, char *text_content)
 	if (text_content == 0)
 		text_content = "";
 
-	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, u + rw);
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (fd == -1)
 		return (-1);
 
