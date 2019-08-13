@@ -11,11 +11,11 @@
  */
 int get_length(char *str)
 {
-        int len;
+	int len;
 
-        for (len = 0; str[len] != '\0'; len++)
-                continue;
-        return (len);
+	for (len = 0; str[len] != '\0'; len++)
+		continue;
+	return (len);
 }
 /**
  * append_text_to_file - appends text at the end of a file
