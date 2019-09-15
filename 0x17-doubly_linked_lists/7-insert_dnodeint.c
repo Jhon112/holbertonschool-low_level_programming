@@ -4,7 +4,7 @@
  * create_node - creates a space for a node
  * @n: data of new node
  *
- * Returns: pointer to new node
+ * Return: pointer to new node
  */
 dlistint_t *create_node(int n)
 {
