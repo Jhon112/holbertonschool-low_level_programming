@@ -37,7 +37,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		while (head != NULL)
 		{
 			if (strcmp(head->key, key_cpy) == 0)
+			{
 				head->value = value_cpy;
+				free(new);
+				return (1);
+			}
 			head = head->next;
 		}
 	}
