@@ -1,3 +1,10 @@
+/**
+ * hash_djb2 - hash function to return a unqiue index
+ * @str: str to evaluate to get the hash
+ *
+ * Return: hash(unique number)
+ */
+
 unsigned long int hash_djb2(const unsigned char *str)
 {
 	unsigned long int hash;
