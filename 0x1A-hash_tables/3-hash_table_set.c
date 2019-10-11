@@ -32,8 +32,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	head = ht->array[index];
 	if (head)
+	{
 		new->next = head;
-
+		while (head != NULL)
+		{
+			if (strcmp(head->key, key_cpy) == 0)
+				head->value = value_cpy;
+			head = head->next;
+		}
+	}
 	head = new;
 
 	ht->array[index] = head;
