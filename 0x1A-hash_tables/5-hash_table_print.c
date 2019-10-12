@@ -28,11 +28,12 @@ void hash_table_print(const hash_table_t *ht)
 			else
 			{
 				head = array[i];
-				while(head != NULL)
+				while (head != NULL)
 				{
 					if (flag)
 						printf(", ");
-					printf("'%s': '%s'", head->key, head->value);
+					printf("'%s': '%s'", head->key,
+					       head->value);
 					flag = 1;
 					head = head->next;
 				}
