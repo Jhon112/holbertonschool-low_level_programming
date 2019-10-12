@@ -29,7 +29,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new->key = key_cpy;
 	new->value = value_cpy;
 	new->next = NULL;
-
 	head = ht->array[index];
 	if (head)
 	{
