@@ -38,7 +38,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			if (strcmp(head->key, key_cpy) == 0)
 			{
+				free(head->value);
 				head->value = value_cpy;
+				free(new->key);
 				free(new);
 				return (1);
 			}
@@ -46,7 +48,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 	}
 	head = new;
-
 	ht->array[index] = head;
 	return (1);
 
