@@ -27,20 +27,20 @@ def island_perimeter(grid):
 
     Args:
         grid(list): multidimensional list that defines a
-        terrain
+                    grid
 
     Returns:
         (int): perimeter of island inside grid
     """
-
     terrain = []
     for array in grid:
         if 1 in array:
             terrain.append([cell for cell in array if cell == 1])
 
-    max_width = 0
-    for land_zone in terrain:
-        if len(land_zone) > max_width:
-            max_width = len(land_zone)
-    perimeter = (max_width*2) + (len(terrain)*2)
-    return perimeter
+    if len(terrain) > 0:
+        max_width = 0
+        for land_zone in terrain:
+            if len(land_zone) > max_width:
+                max_width = len(land_zone)
+        perimeter = (max_width*2) + (len(terrain)*2)
+        return perimeter
