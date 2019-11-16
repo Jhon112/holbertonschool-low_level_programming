@@ -37,10 +37,10 @@ def island_perimeter(grid):
         if 1 in array:
             terrain.append([cell for cell in array if cell == 1])
 
-    if len(terrain) > 0:
-        max_width = 0
-        for land_zone in terrain:
-            if len(land_zone) > max_width:
-                max_width = len(land_zone)
-        perimeter = (max_width*2) + (len(terrain)*2)
-        return perimeter
+    max_width = 0
+
+    for land_zone in terrain:
+        if len(land_zone) > max_width:
+            max_width = len(land_zone)
+    perimeter = (max_width*2) + (len(terrain)*2)
+    return perimeter
