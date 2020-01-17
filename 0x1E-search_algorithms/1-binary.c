@@ -9,19 +9,30 @@
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int left = 0, right = size - 1;
-	size_t m = size / 2;
+	size_t left = 0, right = size - 1;
+	size_t i = 0;
+	int m = (left + right) / 2;
 
 	if (array == NULL)
 		return (-1);
-	
-	if (*(array + m) == value)
-		return (m);
-	else if (*(array + m) < value)
+	while (left <= right)
 	{
-		m = binary_search(array, m, )
+		m = (int)(left + right) / 2;
+		printf("Searching in array: ");
+		for (i = left; i <= right; i++)
+		{
+			printf("%i", *(array + i));
+			if (i == right)
+				printf("\n");
+			else
+				printf(", ");
+		}
+		if (*(array + m) < value)
+			left = m + 1;
+		else if (*(array + m) > value)
+			right = m - 1;
+		else
+			return (m);
 	}
-	
-	 
-
+	return (-1);
 }
